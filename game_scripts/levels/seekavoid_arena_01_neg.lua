@@ -21,5 +21,5 @@ return factory.createLevelApi{
     mapName = 'seekavoid_arena_01',
     episodeLengthSeconds = 20,
     camera = {250, -100, 900},
-    pu = 'pos'
+    pu = 'neg'
 }

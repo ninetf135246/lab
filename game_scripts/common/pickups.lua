@@ -87,6 +87,37 @@ pickups.defaults = {
       model = 'models/mango.md3',
       quantity = 100,
       type = pickups.type.GOAL
+  },
+  apple_reward_n = {
+      name = 'Apple_N',
+      classname = 'apple_reward_n',
+      model = 'models/apple.md3',
+      quantity = -1,
+      type = pickups.type.REWARD
+  },
+  lemon_reward_n = {
+      name = 'Lemon_N',
+      classname = 'lemon_reward_n',
+      model = 'models/lemon.md3',
+      quantity = 1,
+      type = pickups.type.REWARD
+  }
+}
+
+pickups.defaults_neg = {
+  apple_reward = {
+      name = 'Apple',
+      classname = 'apple_reward',
+      model = 'models/lemon.md3',
+      quantity = 1,
+      type = pickups.type.REWARD
+  },
+  lemon_reward = {
+      name = 'Lemon',
+      classname = 'lemon_reward',
+      model = 'models/apple.md3',
+      quantity = -1,
+      type = pickups.type.REWARD
   }
 }
 

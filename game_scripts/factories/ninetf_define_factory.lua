@@ -22,8 +22,12 @@ local custom_observations = require 'decorators.custom_observations'
 local setting_overrides = require 'decorators.setting_overrides'
 local timeout = require 'decorators.timeout'
 local random = require 'common.random'
+local themes = require 'themes.themes'
+local texture_sets = require 'themes.texture_sets'
 local map_maker = require 'dmlab.system.map_maker'
 local randomMap = random(map_maker:randomGen())
+
+local make_map = require 'common.make_map'
 
 local factory = {}
 
@@ -33,20 +37,35 @@ Keyword arguments:
 *   `mapName` (string) - Name of map to load.
 *   `episodeLengthSeconds` (number) - Episode length in seconds.
 ]]
+
+
 function factory.createLevelApi(kwargs)
-  assert(kwargs.mapName and kwargs.episodeLengthSeconds)
 
   local api = {}
 
-  function api:createPickup(classname)
-    if kwargs.pu == 'pos' then
-      return pickups.defaults[classname]
-    end
-    if kwargs.pu == 'neg' then
-      return pickups.defaults_neg[classname]
-    end
+  local MAP_ENTITIES = kwargs.map_entities
+  local VAR_ENTITIES = kwargs.var_entities
+
+
+  local PICKUPS = kwargs.pickups
+
+  function api:init(params)
+    make_map.seedRng(10)
+
+    api._map = make_map.makeMap{
+        mapName = "empty_room",
+        mapEntityLayer = MAP_ENTITIES,
+        mapVariationsLayer = VAR_ENTITIES,
+        useSkybox = true,
+        textureSet = kwargs.texture_set,
+        pickups = PICKUPS
+    }
   end
 
+  function api:createPickup(classname)
+    return pickups.defaults[classname]
+  end
+  
   function api:start(episode, seed, params)
     random:seed(seed)
     randomMap:seed(random:mapGenerationSeed())
@@ -86,18 +105,17 @@ function factory.createLevelApi(kwargs)
   end
 
   function api:nextMap()
-    -- Fast map restarts.
-    local map = kwargs.mapName
-    kwargs.mapName = ''
-    return map
+    return self._map
   end
 
+  timeout.decorate(api, 60 * 60)
   custom_observations.decorate(api)
   setting_overrides.decorate{
       api = api,
       apiParams = kwargs,
       decorateWithTimeout = true
   }
+
   return api
 end
 

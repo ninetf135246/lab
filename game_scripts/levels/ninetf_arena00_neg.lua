@@ -15,11 +15,40 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ]]
 
-local factory = require 'factories.seek_avoid_factory'
+local factory = require 'factories.ninetf_define_factory'
+local texture_sets = require 'themes.texture_sets'
+
 
 return factory.createLevelApi{
-    mapName = 'seekavoid_arena_01',
+    mapName = 'ninetf',
     episodeLengthSeconds = 20,
+    pickups = {L = 'lemon_reward_n', A = 'apple_reward_n'},
     camera = {250, -100, 900},
-    pu = 'pos'
+    texture_set = texture_sets.TETRIS,
+    map_entities = [[
+  ***********
+  * L  P A A*
+  *   AL    *
+  *L A  L  L*
+  * L  P  A *
+  * A PLP A *
+  *  L P L  *
+  * AP  LA A*
+  *L L A L  *
+  * A  P AL *
+  ***********
+    ]],
+    var_entities = [[
+D**************
+***LLLLLLLLL***
+***LDDDDDDDL***
+***L*******L***
+***LLLLLLLLL***
+***L*******L***
+***LLLLLLLLL***
+***L*******L***
+***LDDDDDDDL***
+***LLLLLLLLL***
+***************
+]]
 }
