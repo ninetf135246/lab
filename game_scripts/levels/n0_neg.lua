@@ -15,10 +15,35 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ]]
 
-local factory = require 'factories.lasertag.factory'
+local factory = require 'factories.ninetf_define_factory'
+local texture_sets = require 'themes.texture_sets'
 
 return factory.createLevelApi{
-    mapName = 'lt_chasm',
-    botCount = 4,
-    camera = {0, 0, 480},
+    mapName = 'ninetf',
+    episodeLengthSeconds = 20,
+    pickups = {L = 'lemon_reward_n', A = 'apple_reward_n'},
+    camera = {250, -100, 900},
+    texture_set = texture_sets.TETRIS,
+    map_entities = [[
+  ***********
+  *     P   *
+  * LLL  A  *
+  * L     A *
+  *  A P  AA*
+  *  AA    A*
+  * LL   L  *
+  *    P    *
+  ***********
+    ]],
+    var_entities = [[
+***************
+***LDDDDDDDL***
+***L*******L***
+***LLLLLLLLL***
+***L*******L***
+***LLLLLLLLL***
+***L*******L***
+***LDDDDDDDL***
+***************
+]]
 }

@@ -15,6 +15,35 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ]]
 
-local factory = require 'factories.psychlab.arbitrary_visuomotor_mapping_factory'
+local factory = require 'factories.ninetf_define_factory'
+local texture_sets = require 'themes.texture_sets'
 
-return factory.createLevelApi{}
+return factory.createLevelApi{
+    mapName = 'ninetf',
+    episodeLengthSeconds = 20,
+    pickups = {L = 'lemon_reward', A = 'apple_reward'},
+    camera = {250, -100, 900},
+    texture_set = texture_sets.MISHMASH0,
+    map_entities = [[
+  ***********
+  *   LL A  *
+  *LP       *
+  *  A  AA  *
+  *   P  AA *
+  * LL L    *
+  * LL  P   *
+  *    L A  *
+  ***********
+    ]],
+    var_entities = [[
+A**************
+***LLLLDLLLL***
+***L***D***L***
+***LLLLDLLLL***
+***L***D***L***
+***LLLLDLLLL***
+***L***D***L***
+***LLLLDLLLL***
+***************
+]]
+}

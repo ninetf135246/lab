@@ -15,22 +15,35 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ]]
 
-local factory = require 'factories.lasertag.procedural_factory'
+local factory = require 'factories.ninetf_define_factory'
+local texture_sets = require 'themes.texture_sets'
 
 return factory.createLevelApi{
-    episodeLengthSeconds = 240,
-    botCount = 1,
-    color = true,
-    mazeGenerationParams = {
-        height = 21,
-        width = 21,
-        maxRooms = 4,
-        roomMinSize = 5,
-        roomMaxSize = 7,
-        roomSpawnCount = 3,
-    },
-    pickupParams = {
-        pickupCount = 4,
-        weaponCount = 2,
-    },
+    mapName = 'ninetf',
+    episodeLengthSeconds = 20,
+    pickups = {L = 'lemon_reward_n', A = 'apple_reward_n'},
+    camera = {250, -100, 900},
+    texture_set = texture_sets.MISHMASH,
+    map_entities = [[
+  *********
+  *  P    *
+  *LL  AA *
+  *LL   AA*
+  *  APL  *
+  * A  L L*
+  *AA   LL*
+  *   P   *
+  *********
+    ]],
+    var_entities = [[
+b************
+***AAAAAAA***
+***BABABAB***
+***ABABABA***
+***ABABABA***
+***BABABAB***
+***BABABAB***
+***AAAAAAA***
+*************
+]]
 }

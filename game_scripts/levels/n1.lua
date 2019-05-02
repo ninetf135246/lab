@@ -23,31 +23,27 @@ return factory.createLevelApi{
     episodeLengthSeconds = 20,
     pickups = {L = 'lemon_reward', A = 'apple_reward'},
     camera = {250, -100, 900},
-    texture_set = texture_sets.MINESWEEPER,
+    texture_set = texture_sets.MISHMASH,
     map_entities = [[
   *********
-  * L  P A*
-  * L AA  *
-  * LA  A *
-  * LAP A *
-  * A PLP *
-  * AA   L*
-  * AP  L *
-  *A A A L*
-  * A  P L*
+  *  P    *
+  *LL  AA *
+  *LL   AA*
+  *  APL  *
+  * A  L L*
+  *AA   LL*
+  *   P   *
   *********
     ]],
     var_entities = [[
-*************
-***ABABABA***
-***ABABABA***
+b************
+***AAAAAAA***
 ***BABABAB***
 ***ABABABA***
 ***ABABABA***
 ***BABABAB***
 ***BABABAB***
-***ABABABA***
-***ABABABA***
+***AAAAAAA***
 *************
 ]]
 }

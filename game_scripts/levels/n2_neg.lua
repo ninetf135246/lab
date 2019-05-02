@@ -21,33 +21,30 @@ local texture_sets = require 'themes.texture_sets'
 return factory.createLevelApi{
     mapName = 'ninetf',
     episodeLengthSeconds = 20,
-    pickups = {L = 'lemon_reward', A = 'apple_reward'},
+    pickups = {L = 'lemon_reward_n', A = 'apple_reward_n'},
     camera = {250, -100, 900},
-    texture_set = texture_sets.MINESWEEPER,
+    texture_set = texture_sets.MISHMASH0,
     map_entities = [[
   ***********
-  * L  P A A*
-  *   AL    *
-  *L A  L  L*
-  * L  P  A *
-  * A PLP A *
-  *  L P L  *
-  * AP  LA A*
-  *L L A L  *
-  * A  P AL *
+  *   LL A  *
+  *LP       *
+  *  A  AA  *
+  *   P  AA *
+  * LL L    *
+  * LL  P   *
+  *    L A  *
   ***********
     ]],
     var_entities = [[
-D**************
-***LLLLDLLLL***
-***L***D***L***
-***L***D***L***
+A**************
 ***LLLLDLLLL***
 ***L***D***L***
 ***LLLLDLLLL***
 ***L***D***L***
+***LLLLDLLLL***
 ***L***D***L***
 ***LLLLDLLLL***
 ***************
 ]]
 }
+
