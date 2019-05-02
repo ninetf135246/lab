@@ -104,10 +104,10 @@ texture_sets.MINESWEEPER = {
 
 texture_sets.MINE = {
     floor = {
-        {tex = 'map/lab_games/lg_style_04_floor_blue_bright'},
+        {tex = 'map/lab_games/lg_style_01_floor_orange'},
         {tex = 'map/lab_games/lg_style_01_floor_orange_bright'},
-        {tex = 'map/lab_games/lg_style_04_floor_blue_bright'},
-        {tex = 'map/lab_games/lg_style_01_floor_blue_bright'},
+        -- {tex = 'map/lab_games/lg_style_04_floor_blue_bright'},
+        -- {tex = 'map/lab_games/lg_style_01_floor_blue_bright'},
 
     },
     ceiling = {{tex = 'map/lab_games/fake_sky'}},
