@@ -23,7 +23,7 @@ return factory.createLevelApi{
     episodeLengthSeconds = 20,
     pickups = {L = 'lemon_reward', A = 'apple_reward'},
     camera = {250, -100, 900},
-    texture_set = texture_sets.MISHMASH,
+    texture_set = texture_sets.MINE,
     map_entities = [[
   *********
   *  P    *
@@ -36,7 +36,7 @@ return factory.createLevelApi{
   *********
     ]],
     var_entities = [[
-b************
+a************
 ***AAAAAAA***
 ***BABABAB***
 ***ABABABA***

@@ -36,14 +36,14 @@ return factory.createLevelApi{
   ***********
     ]],
     var_entities = [[
+AZ*************
+***B*******B***
+***ABBBBBBBA***
+****AAAAAAA****
 ***************
-***LDDDDDDDL***
-***L*******L***
-***LLLLLLLLL***
-***L*******L***
-***LLLLLLLLL***
-***L*******L***
-***LDDDDDDDL***
+****AAAAAAA****
+***ABBBBBBBA***
+***B*******B***
 ***************
 ]]
 }
