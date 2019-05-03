@@ -87,8 +87,8 @@ texture_sets.TRON = {
 
 texture_sets.MINESWEEPER = {
     floor = {
-        {tex = 'map/lab_games/lg_style_01_floor_blue'},
-        {tex = 'map/lab_games/lg_style_03_floor_blue_bright'},
+        {tex = 'map/lab_games/lg_style_01_floor_blue_bright'},
+        {tex = 'map/lab_games/lg_style_05_floor_blue_bright'},
         {tex = 'map/lab_games/lg_style_04_floor_orange'},
         {tex = 'map/lab_games/lg_style_04_floor_orange_bright'},
     },

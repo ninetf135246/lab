@@ -26,13 +26,13 @@ return factory.createLevelApi{
     texture_set = texture_sets.MINESWEEPER,
     map_entities = [[
   ***********
-  *   LL A  *
-  *LP       *
-  *  A  AA  *
-  *   P  AA *
-  * LL L    *
-  * LL  P   *
-  *    L A  *
+  *     L L *
+  * A A   L *
+  * AA   L  *
+  *   P     *
+  * LL   A A*
+  * LL  P AA*
+  *         *
   ***********
     ]],
     var_entities = [[
