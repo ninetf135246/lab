@@ -57,7 +57,7 @@ pickups.defaults = {
       name = 'Strawberry',
       classname = 'strawberry_reward',
       model = 'models/strawberry.md3',
-      quantity = 2,
+      quantity = 1,
       type = pickups.type.REWARD
   },
   fungi_reward = {
@@ -100,6 +100,13 @@ pickups.defaults = {
       classname = 'lemon_reward_n',
       model = 'models/lemon.md3',
       quantity = 1,
+      type = pickups.type.REWARD
+  },
+  strawberry_reward_n = {
+      name = 'Strawberry',
+      classname = 'strawberry_reward',
+      model = 'models/strawberry.md3',
+      quantity = -1,
       type = pickups.type.REWARD
   }
 }

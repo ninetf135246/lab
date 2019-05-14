@@ -229,19 +229,41 @@ texture_sets.CUSTOMIZABLE_FLOORS = {
     wallDecals = decals.decals,
 }
 
+
 texture_sets.CAPTURE_THE_FLAG = {
     variations = {
         A = {
-            floor = {{tex = 'map/lab_games/lg_style_01_floor_red_team_d'}},
-            wall = {{tex = 'map/lab_games/lg_style_04_wall_red'}},
+            floor = {{tex = 'map/lab_games/lg_style_04_floor_orange_bright'}},
+            wall = {{tex = 'map/lab_games/lg_style_04_wall_red_bright'}},
         },
         B = {
             floor = {{tex = 'map/lab_games/lg_style_01_floor_blue_team_d'}},
-            wall = {{tex = 'map/lab_games/lg_style_02_wall_blue'}},
+            wall = {{tex = 'map/lab_games/lg_style_04_wall_red_bright'}},
         },
         E = {
-            floor = {{tex = 'map/lab_games/lg_style_05_floor_orange_bright'}},
-            wall = {{tex = 'map/lab_games/lg_style_03_wall_gray'}},
+            floor = {{tex = 'map/lab_games/lg_style_02_floor_green_bright'}},
+            wall = {{tex = 'map/lab_games/lg_style_04_wall_red_bright'}},
+        },
+    },
+    floor = {{tex = 'map/lab_games/lg_style_04_floor_orange'}},
+    ceiling = {{tex = 'map/lab_games/fake_sky'}},
+    wall = {{tex = 'map/lab_games/lg_style_02_wall_yellow'}},
+    wallDecals = decals.decals,
+}
+
+texture_sets.CAPTURE_THE_FLAG_N = {
+    variations = {
+        A = {
+            floor = {{tex = 'map/lab_games/lg_style_04_floor_orange_bright'}},
+            wall = {{tex = 'map/lab_games/lg_style_02_wall_blue_bright'}},
+        },
+        B = {
+            floor = {{tex = 'map/lab_games/lg_style_01_floor_blue_team_d'}},
+            wall = {{tex = 'map/lab_games/lg_style_02_wall_blue_bright'}},
+        },
+        E = {
+            floor = {{tex = 'map/lab_games/lg_style_02_floor_green_bright'}},
+            wall = {{tex = 'map/lab_games/lg_style_02_wall_blue_bright'}},
         },
     },
     floor = {{tex = 'map/lab_games/lg_style_04_floor_orange'}},
