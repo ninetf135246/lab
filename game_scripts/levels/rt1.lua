@@ -21,29 +21,29 @@ local texture_sets = require 'themes.texture_sets'
 return factory.createLevelApi{
     mapName = 'ninetf',
     episodeLengthSeconds = 20,
-    pickups = {L = 'lemon_reward_n', A = 'apple_reward', S = 'strawberry_reward_n'},
+    pickups = {L = 'lemon_reward', A = 'apple_reward_n', S='strawberry_reward'},
     camera = {250, -100, 900},
     texture_set = texture_sets.CAPTURE_THE_FLAG,
     map_entities = [[
-  ***********
-  *    P    *
-  * AAS SLL *
-  * AA S LL *
-  *P S P S P*
-  *    S    *
-  * S ALA S *
-  *    P    *
-  ***********
+  *********
+  *  P    *
+  *SL  AL *
+  *SS   SA*
+  *  APL  *
+  * A  S S*
+  *AS   SL*
+  *   P   *
+  *********
     ]],
     var_entities = [[
-***************
-***BBBBBBBBB***
-***BBBEEEBBB***
-***EEEBEBEEE**
-***EEEEBEEEE***
-***EEEEAEEEE***
-***AAAAEAAAA***
-***AAAAAAAAA***
-***************
+a************
+***AAAAAAA***
+***BABABAB***
+***ABABABA***
+***ABABABA***
+***BABABAB***
+***BABABAB***
+***AAAAAAA***
+*************
 ]]
 }
